@@ -1,0 +1,81 @@
+{
+    "highlight.regexes": {
+        // access-list
+        "\\b(access-list)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#1E90FF", "fontWeight": "bold" }
+            ]
+        },
+        // permit
+        "\\b(permit)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#32CD32", "fontWeight": "bold" }
+            ]
+        },
+        // deny
+        "\\b(deny)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#FF6347", "fontWeight": "bold" }
+            ]
+        },
+        // بروتوكولات
+        "\\b(tcp|udp|icmp|ip|ip6|ospf|bgp|eigrp|rip)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#3CB371", "fontStyle": "italic" }
+            ]
+        },
+        // أوامر البورت
+        "\\b(eq|gt|lt|neq|range)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#9370DB", "fontWeight": "bold" }
+            ]
+        },
+        // source
+        "\\b(source)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#FFA07A", "fontWeight": "bold" }
+            ]
+        },
+        // destination
+        "\\b(destination)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#87CEFA", "fontWeight": "bold" }
+            ]
+        },
+        // any, host, object-group
+        "\\b(any|host|object-group)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "backgroundColor": "#FFFF99AA", "color": "#000000" }
+            ]
+        },
+        // شبكات وعناوين IP
+        "\\b(subnet|netmask|network|prefix|mask|0\\.0\\.0\\.0|255\\.255\\.255\\.0|255\\.255\\.0\\.0|255\\.0\\.0\\.0)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "backgroundColor": "#FFDAB9AA", "color": "#000000" }
+            ]
+        },
+        // NAT/VPN
+        "\\b(nat|vpn|inside|outside|static|dynamic)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#BA55D3", "fontWeight": "bold" }
+            ]
+        },
+        // كلمات تحكم إضافية
+        "\\b(time-range|remark|log-input|inactive|active)\\b": {
+            "filterFileRegex": ".*\\.acl$",
+            "decorations": [
+                { "color": "#A9A9A9", "fontStyle": "italic" }
+            ]
+        }
+    }
+}

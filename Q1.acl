@@ -1,0 +1,23 @@
+//Part1
+
+Router-B> ip access-list standard RouterBP1
+Router-B> permit 172.16.50.90 0.0.0.1
+Router-B> deny 172.16.50.80 0.0.0.15
+Router-B> permit 172.16.50.64 0.0.0.63
+Router-B> deny host 172.16.50.20
+Router-B> permit 172.16.50.16 0.0.0.15
+Router-B> deny 172.16.50.0 0.0.0.127
+Router-B> deny 172.16.50.224 0.0.0.7
+Router-B> permit 172.16.50.0 0.0.0.255
+> 
+> 
+Router-B> permit host 172.16.10.38
+Router-B> deny 172.16.10.32 0.0.0.31
+Router-B> permit 172.16.10.192  0.0.0.7
+Router-B> deny 172.16.10.128 0.0.0.127
+Router-B> permit 172.16.30.0 0.0.0.255
+>
+> 
+Router-B> interface e0
+Router-B>ip access-group RouterBP1 out
+ 

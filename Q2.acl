@@ -1,0 +1,35 @@
+ Router_A>ip access-list extended RouterAP2
+ Router_A>deny udp host 172.16.30.40 172.16.10.8 0.0.0.7
+ Router_A>deny udp host 172.16.30.40 host 172.16.10.16 
+ Router_A>permit udp 172.16.30.0 0.0.0.63 172.16.10.8 0.0.0.7
+ Router_A>permit udp 172.16.30.0 0.0.0.63 host 172.16.10.16 
+ Router_A>permit udp 172.16.50.0 0.0.0.127 any gt 4999
+ Router_A>permit udp 172.16.30.0 0.0.0.255 host 172.16.10.8 eq 53
+ Router_A>permit udp 172.16.50.0 0.0.0.255 host 172.16.10.8 eq 53
+ Router_A>deny udp 172.16.30.0 0.0.0.255 any 
+ Router_A>deny udp 172.16.50.0 0.0.0.255 any 
+ >
+ >
+ Router_A>permit tcp any host 172.16.10.2 eq 443
+ Router_A>deny tcp any any eq 80 
+ Router_A>deny tcp 172.16.30.0 0.0.0.255 172.16.10.0 0.0.0.63
+ Router_A>deny tcp 172.16.50.0 0.0.0.255 172.16.10.0 0.0.0.63
+ Router_A>permit tcp 172.16.50.0 0.0.0.255 host 172.16.10.7 eq 25
+ Router_A>deny tcp 172.16.30.0 0.0.0.255 host 172.16.10.7 eq 25
+ Router_A>permit tcp 172.16.30.0 0.0.0.255 any 
+ Router_A>permit tcp 172.16.50.0 0.0.0.255 any 
+ >
+ >
+ >
+ Router_A>permit icmp 172.16.30.0 0.0.0.255 any
+ Router_A>permit icmp 172.16.50.0 0.0.0.255 any 
+ >
+ >
+ Router_A>deny ip 172.16.30.0 0.0.0.255 any
+ Router_A>deny ip 172.16.50.0 0.0.0.255 any
+ >
+ >
+ >
+ >
+ Router_A>interface s0
+ Router_A>ip access-group RouterAP2 in
